@@ -28,6 +28,7 @@ const BridgeInput = () => {
             delg=g-gi;
             row.push(delg);
             out.push(row);
+            i=i+1;
         }while(Math.abs(delg)>0.001);
         return [out, bi];
 
@@ -46,7 +47,7 @@ const BridgeInput = () => {
         let bB=bA-h;
         let thetaA=Math.atan((4*b-h)/l)*180/Math.PI;
         let thetaB=Math.atan((4*b+h)/l)*180/Math.PI;
-        return [A+"x^2+"+B+"x",eA,eB,bA,bB,thetaA,thetaB];
+        return [A.toFixed(6)+"x^2"+B.toFixed(6)+"x",eA,eB,bA,bB,thetaA,thetaB];
 
     }
     const yCalc=(A,B,x)=>{
@@ -158,8 +159,7 @@ const BridgeInput = () => {
         }else{
             b=l/22;
         }
-        let h=BL-AL;
-
+        let h=(BL-AL);
         
         let cables=cableIdentifier(WW,l);
         let HL=cables[4]*9.81/1000;
@@ -176,6 +176,7 @@ const BridgeInput = () => {
             let row={};
             row.l=l;
             row.biter=sagCalc(EA,l,b,h,LC[0],LC[i],lf[i]);
+            row.h=h;
             row.b=row.biter[1];
             row.geometry=geometryCalc(row.b,h,l);
             if(h>=0){
