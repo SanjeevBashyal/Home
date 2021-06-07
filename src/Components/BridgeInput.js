@@ -168,7 +168,7 @@ const BridgeInput = () => {
         let PL=AB[1];
         let LC=loadCalc(WW,HL,l);
         let lf=[0,1,2];
-        let EA=200*Area;
+        let EA=110*Area;
         let i=1;
         let out=[];
         // console.log(EA);
