@@ -186,7 +186,7 @@ const BridgeCalcShow = (props) => {
 
             </table>
             
-            <h3>Calculation of Sag for hoisting load (g)={data[2].g.toFixed(3)} kN/m</h3>
+            <h3>Calculation of Sag for full load (g)={data[2].g.toFixed(3)} kN/m</h3>
             <table border="1px">
             <tr>
                     <td>
