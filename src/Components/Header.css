@@ -1,5 +1,6 @@
-/* .header{
-    background-color: black;
+.header{
+    position: fixed;
+    width: 100%;
     
-} */
+}
 

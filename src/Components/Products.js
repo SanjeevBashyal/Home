@@ -106,7 +106,7 @@ const Products = (props) => {
                 <stop offset="100%" stopColor={"hsl(" + 360+",50%,50%)"}/>
             </linearGradient>
             </defs>
-                <title>Lichal Corporation</title>
+                <title>Our Products</title>
                 <path className="cls-1"
                     d="M344,503.8466v79.0985h78.7249a14.1213,14.1213,0,0,0-3.2154-4.5016,15.0558,15.0558,0,0,0-9.6462-3.8584H360.99a11.5637,11.5637,0,0,1-6.4308-3.8585,11.731,11.731,0,0,1-2.5723-8.36v-50.16a12.7606,12.7606,0,0,0-3.2154-5.1446C346.5431,504.898,345.1261,504.1279,344,503.8466Z"
                     transform="translate(-343 -181)" fill={"hsl(" + colourList[3]+",100%,50%)"}/>
@@ -126,8 +126,8 @@ const Products = (props) => {
                     transform="translate(-343 -181)" fill="none" stroke={"url(#"+id2+")"} strokeWidth="4px"/>
             </svg>
             <div className="products_list">
-                <ProductItem svg={bridge} href="https://bridge.lichal.com" name="bridge" X="100%" Y="45%"/>
-                <ProductItem svg={amin} href="https://amin.lichal.com" name="amin" X="100%" Y="15%"/>
+                <ProductItem svg={bridge} href="https://bridge.lichal.com" name="Bridge" X="100%" Y="45%"/>
+                <ProductItem svg={amin} href="https://amin.lichal.com" name="Amin" X="100%" Y="15%"/>
                 {/* <div className="product_item">
                     <a href="https://amin.lichal.com"><img src={bridge} alt="Bridge"/></a>
                 </div> */}

@@ -16,20 +16,20 @@
   transition: transform 300ms ease-in 0ms;
 }
 
-.product:hover > .products_list > .product_item.bridge{
+.product:hover > .products_list > .product_item.Bridge{
   transition-delay: 1000ms;
 }
 
-.product > .products_list > .product_item.bridge{
+.product > .products_list > .product_item.Bridge{
   transition: transform 300 ease-in;
   transition-delay: 200ms;
 }
 
-.product:hover > .products_list > .product_item.amin{
+.product:hover > .products_list > .product_item.Amin{
   transition-delay: 1200ms;
 }
 
-.product > .products_list > .product_item.amin{
+.product > .products_list > .product_item.Amin{
   transition: transform 300 ease-in;
   transition-delay: 0ms;
 }
