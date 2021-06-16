@@ -42,7 +42,7 @@ const Logo = (props) => {
     return ( 
         <div className="logo_main">
             <div className="logo">
-                <a href="%PUBLIC_URL%">
+                <a href="/">
                     <svg onMouseEnter={runThis} onMouseLeave={clearThis} id="logo1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 384.765 402.9451">
                     <defs>
                     <linearGradient id={id1} x1="0" y1="0" x2="1" y2="1">

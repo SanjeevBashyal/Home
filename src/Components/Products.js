@@ -1,5 +1,7 @@
 import {useState,useRef} from 'react';
+import ProductItem from './ProductItem';
 import './Products.css'
+import {bridge,amin} from './ProductList'
 
 const Products = (props) => {
     const size_original=parseFloat(props.size);
@@ -40,15 +42,27 @@ const Products = (props) => {
         // interval_grow.current=setInterval(function(){grow()},50);
         interval_colour.current= setInterval(function(){change();},90);
         // setTimeout(function(){clearInterval(interval_grow.current);},2000);
+        // setTimeout(function () {
+        //     console.log("Here");
+        //     addItem();
+        // },1000);
     };
 
     const clearThis=()=>{
         clearInterval(interval_colour.current);
+        // ReactDOM.unmountComponentAtNode(document.getElementById("plist"));
         // clearInterval(interval_grow.current);
         // setSz(size_original);
         // size.current=size_original;
 
     };
+
+    // const addItem=()=>{
+    //     ReactDOM.render(
+    //         <ProductItem svg="logo192.png" name="bridge" />,
+    //       document.getElementById('plist')
+    //     );
+    // }
 
     // useEffect(()=>{
     //     runThis();
@@ -58,9 +72,9 @@ const Products = (props) => {
 
 
     return ( 
-        <div className="product">
+        <div className="product" onMouseEnter={runThis} onMouseLeave={clearThis}>
             {/* {console.log(dim)} */}
-            <svg onMouseEnter={runThis} onMouseLeave={clearThis} id="pro" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width={sz} height={sz} viewBox="0 0 384.765 402.9451">
+            <svg id="pro" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width={sz} height={sz} viewBox="0 0 384.765 402.9451">
             <defs>
             <linearGradient id={id1} x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stopColor={"hsl(" + colourList[0]+",100%,50%)"}/>
@@ -92,7 +106,7 @@ const Products = (props) => {
                 <stop offset="100%" stopColor={"hsl(" + 360+",50%,50%)"}/>
             </linearGradient>
             </defs>
-                <title>v2final</title>
+                <title>Lichal Corporation</title>
                 <path className="cls-1"
                     d="M344,503.8466v79.0985h78.7249a14.1213,14.1213,0,0,0-3.2154-4.5016,15.0558,15.0558,0,0,0-9.6462-3.8584H360.99a11.5637,11.5637,0,0,1-6.4308-3.8585,11.731,11.731,0,0,1-2.5723-8.36v-50.16a12.7606,12.7606,0,0,0-3.2154-5.1446C346.5431,504.898,345.1261,504.1279,344,503.8466Z"
                     transform="translate(-343 -181)" fill={"hsl(" + colourList[3]+",100%,50%)"}/>
@@ -110,12 +124,14 @@ const Products = (props) => {
                 <path className="cls-2"
                     d="M646.6,465.7a32.3342,32.3342,0,0,0-7.3629-10.3081c-8.5-7.9293-18.8007-8.72-22.0887-8.8354H505.2323a26.4788,26.4788,0,0,1-14.7258-8.8355,26.8625,26.8625,0,0,1-5.89-19.1436V303.7161A29.07,29.07,0,0,0,464,284.5726"
                     transform="translate(-343 -181)" fill="none" stroke={"url(#"+id2+")"} strokeWidth="4px"/>
-                
-                {/* <path
-                    d="M464,284.5726V465.7H646.6a32.3342,32.3342,0,0,0-7.3629-10.3081c-8.5-7.9293-18.8007-8.72-22.0887-8.8354H505.2323a26.4788,26.4788,0,0,1-14.7258-8.8355,26.8625,26.8625,0,0,1-5.89-19.1436V303.7161A29.07,29.07,0,0,0,464,284.5726Z"
-                    transform="translate(-343 -181)" fill="white" stroke="red" strokeWidth="2px"/> */}
             </svg>
-        {/* <button onClick={runThis}>Click Me</button> */}
+            <div className="products_list">
+                <ProductItem svg={bridge} href="https://bridge.lichal.com" name="bridge" X="100%" Y="45%"/>
+                <ProductItem svg={amin} href="https://amin.lichal.com" name="amin" X="100%" Y="15%"/>
+                {/* <div className="product_item">
+                    <a href="https://amin.lichal.com"><img src={bridge} alt="Bridge"/></a>
+                </div> */}
+            </div>
         </div>
      );
 }

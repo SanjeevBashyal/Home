@@ -1,0 +1,19 @@
+  .product_item{
+      position:absolute;
+      transform:scale(0);
+      transition: transform 500ms;
+  }
+
+  .product_item > a > img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid black;
+    transform:scale(1);
+    transition: transform 500ms ease-in;
+  }
+
+  .product_item > a > img:hover{
+    transform:scale(1.2);
+    transition: transform 500ms;
+  }
